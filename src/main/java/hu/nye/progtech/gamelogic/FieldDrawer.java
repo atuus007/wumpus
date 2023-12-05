@@ -48,7 +48,7 @@ public class FieldDrawer {
                         System.out.printf("%3s\n", fieldElement.getShortCut());
                     }
                 } else {
-                    if (conditionForColoring(fieldElement, wumpusLogic.hero)) {
+                    if (conditionForColoring(fieldElement, wumpusLogic.getHero())) {
                         System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND + "%3s\n" + ConsoleColor.RESET, fieldElement.getShortCut());
                     } else {
                         System.out.printf("%3s\n", fieldElement.getShortCut());
@@ -57,14 +57,14 @@ public class FieldDrawer {
 
             } else {
                 if (fieldElement.getColumn() == 'A') {
-                    if (conditionForColoring(fieldElement, wumpusLogic.hero)) {
+                    if (conditionForColoring(fieldElement, wumpusLogic.getHero())) {
                         System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND + "%d\t" + ConsoleColor.RESET, fieldElement.getRow());
                     } else {
                         System.out.printf("%d\t", fieldElement.getRow());
                     }
 
                 }
-                if (conditionForColoring(fieldElement, wumpusLogic.hero)) {
+                if (conditionForColoring(fieldElement, wumpusLogic.getHero())) {
                     System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND + "%3s" + ConsoleColor.RESET, fieldElement.getShortCut());
                 } else {
                     System.out.printf("%3s", fieldElement.getShortCut());
