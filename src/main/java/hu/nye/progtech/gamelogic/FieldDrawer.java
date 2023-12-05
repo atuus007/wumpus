@@ -17,7 +17,7 @@ public class FieldDrawer {
      * Let's call this as the first sentence,
      * here the second one.
      */
-    private static boolean conditionForColoring(FieldObject fieldElement, Hero hero) {
+    private boolean conditionForColoring(FieldObject fieldElement, Hero hero) {
         return fieldElement.getColumn() == hero.getColumn() && fieldElement.getRow() == hero.getRow();
     }
 
@@ -25,7 +25,7 @@ public class FieldDrawer {
      * Let's call this as the first sentence,
      * here the second one.
      */
-    public static void draw(WumpusLogic wumpusLogic) {
+    public void draw(WumpusLogic wumpusLogic) {
 
         wumpusLogic.field.sort(Comparator
                 .comparing(FieldObject::getRow)

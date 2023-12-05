@@ -157,7 +157,7 @@ class WumpusLogicTest {
         wumpusLogic.takeTheGold(); // true
         wumpusLogic.getHero().setColumn( wumpusLogic.getHero().getStartColumn());
         wumpusLogic.getHero().setRow( wumpusLogic.getHero().getStartRow());
-        Assertions.assertEquals(wumpusLogic.hero.isWinner(),true);
+        Assertions.assertEquals(wumpusLogic.getHero().isWinner(),true);
     }
 
     @Test

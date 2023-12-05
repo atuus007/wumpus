@@ -18,6 +18,7 @@ public class Wumpus {
 
 
     public static boolean viewLoop = true;
+    public static DatabaseLoader databaseLoader;
     static int viewMenu = -1;
 
     public static WumpusLogic gameLogic = null;
@@ -30,8 +31,6 @@ public class Wumpus {
 
         gameLogic = new WumpusLogic(LoadFrom.database, id, databaseLoader);
     }
-
-    public static DatabaseLoader databaseLoader;
 
     /**
      * Let's call this as the first sentence,
@@ -51,7 +50,7 @@ public class Wumpus {
         while (viewLoop) {
             System.out.println(ConsoleColor.BLUE + "-----------------Wumpus--------------------" + ConsoleColor.RESET);
             // kezdő pálya betöltése
-            FieldDrawer.draw(gameLogic);
+            //FieldDrawer.draw(gameLogic);
 
             // hős adatai
             System.out.println("Hős adatai:");
@@ -90,7 +89,7 @@ public class Wumpus {
      */
     public static boolean isWin() {
         if (gameLogic.isWin()) {
-            FieldDrawer.draw(gameLogic);
+            //FieldDrawer.draw(gameLogic);
         }
         return gameLogic.isWin();
     }
