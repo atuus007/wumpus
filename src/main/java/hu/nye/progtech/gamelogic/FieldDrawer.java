@@ -21,7 +21,7 @@ public class FieldDrawer {
         return fieldElement.getColumn() == hero.getColumn() && fieldElement.getRow() == hero.getRow();
     }
 
-    /**
+    /**afsdf
      * Let's call this as the first sentence,
      * here the second one.
      */
