@@ -40,9 +40,6 @@ public class FileLoader {
             matrixLength = Integer.parseInt(firstLine[0]);
             int row = 1;
 
-            // hős adatainak a betöltése
-            this.hero = createHero(firstLine);
-
             while ((line = reader.readLine()) != null) {
                 String[] currentLine = line.split("");
                 for(int column = 0; column<currentLine.length; column++){
@@ -58,6 +55,8 @@ public class FileLoader {
                 }
                 row++;
             }
+            // hős adatainak a betöltése
+            this.hero = createHero(firstLine);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -66,13 +65,12 @@ public class FileLoader {
 
         return new Hero(
             -1,  //id
-            'H', //shortCut
             firstLineData[1].charAt(0),
             Integer.parseInt(firstLineData[2]),
             this.getCorrectDirection(firstLineData[3].charAt(0)),
             this.numberOfWumpus(), //azért mert annyi nyillal kezd amennyi wumpus van
             "unknow",
-            hero.getStep(), //ezmiafasz?????
+            0,
             firstLineData[1].charAt(0),
             Integer.parseInt(firstLineData[2]),
             false,

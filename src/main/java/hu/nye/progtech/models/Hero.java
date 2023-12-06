@@ -15,7 +15,6 @@ public class Hero extends FieldObject {
 
     public Hero(
             int id,
-            char shortCut,
             char column,
             int row,
             Direction direction,
@@ -27,7 +26,7 @@ public class Hero extends FieldObject {
             boolean hasGold,
             int matrixLength
     ) {
-        super(shortCut, column, row, id, matrixLength);
+        super('H', column, row, id, matrixLength);
         this.matrixLength = matrixLength;
         this.id = id;
         this.direction = direction;
@@ -40,7 +39,7 @@ public class Hero extends FieldObject {
     }
 
     public Hero() {
-        super('0', '0', 0, 0, 0);
+        super('H', '0', 0, 0, 0);
         this.direction = Direction.East;
         this.arrowCount = 0;
         this.name = "";
@@ -173,6 +172,7 @@ public class Hero extends FieldObject {
         final StringBuilder sb = new StringBuilder("Hero{");
         sb.append("name=").append(name);
         sb.append(", direction=").append(direction);
+
         sb.append(", arrowCount=").append(arrowCount);
         sb.append(", shortCut=").append(this.getShortCut());
         sb.append(", column=").append(this.getColumn());

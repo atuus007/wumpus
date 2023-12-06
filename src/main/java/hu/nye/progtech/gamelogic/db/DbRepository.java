@@ -58,7 +58,6 @@ public class DbRepository {
                         heroes.add(new Hero(
                                 id,
                                 shortcut.toCharArray()[0],
-                                (char) heroColumn,
                                 heroRow,
                                 Direction.values()[direction],
                                 arrowCount,
