@@ -6,7 +6,7 @@ import hu.nye.progtech.gamelogic.FieldDrawer;
 import hu.nye.progtech.gamelogic.LoadFrom;
 import hu.nye.progtech.gamelogic.WumpusLogic;
 import hu.nye.progtech.gamelogic.db.DatabaseLoader;
-import hu.nye.progtech.models.ConsoleColor;
+import hu.nye.progtech.enums.ConsoleColor;
 import hu.nye.progtech.models.MenuCallback;
 
 
@@ -20,9 +20,11 @@ public class Wumpus {
     public static boolean viewLoop = true;
     public static DatabaseLoader databaseLoader;
     static int viewMenu = -1;
-
+    private FieldDrawer fieldDrawer;
     public static WumpusLogic gameLogic = null;
-
+    public Wumpus() {
+        this.fieldDrawer = new FieldDrawer();
+    }
     /**
      * Let's call this as the first sentence,
      * here the second one.
@@ -45,12 +47,13 @@ public class Wumpus {
      * Let's call this as the first sentence,
      * here the second one.
      */
-    public static void show(MenuCallback callback) {
+    public void show(MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
             System.out.println(ConsoleColor.BLUE + "-----------------Wumpus--------------------" + ConsoleColor.RESET);
             // kezdő pálya betöltése
             //FieldDrawer.draw(gameLogic);
+            //this.fieldDrawer(gameLogic);
 
             // hős adatai
             System.out.println("Hős adatai:");

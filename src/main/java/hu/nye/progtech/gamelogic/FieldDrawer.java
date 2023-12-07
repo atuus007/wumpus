@@ -3,7 +3,7 @@ package hu.nye.progtech.gamelogic;
 import java.util.Comparator;
 import java.util.stream.IntStream;
 
-import hu.nye.progtech.models.ConsoleColor;
+import hu.nye.progtech.enums.ConsoleColor;
 import hu.nye.progtech.models.FieldObject;
 import hu.nye.progtech.models.Hero;
 

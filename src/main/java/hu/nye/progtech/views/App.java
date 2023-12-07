@@ -2,8 +2,7 @@ package hu.nye.progtech.views;
 
 import java.util.Scanner;
 
-import hu.nye.progtech.Main;
-import hu.nye.progtech.models.ConsoleColor;
+import hu.nye.progtech.enums.ConsoleColor;
 import hu.nye.progtech.models.MenuCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,5 +1,7 @@
 package hu.nye.progtech.models;
 
+import hu.nye.progtech.enums.Direction;
+
 /**
  * Let's call this as the first sentence,
  * here the second one.
@@ -11,7 +13,6 @@ public class Hero extends FieldObject {
     private Direction direction;
     private int arrowCount;
     private String name;
-    private int matrixLength;
 
     public Hero(
             int id,
@@ -27,7 +28,6 @@ public class Hero extends FieldObject {
             int matrixLength
     ) {
         super('H', column, row, id, matrixLength);
-        this.matrixLength = matrixLength;
         this.id = id;
         this.direction = direction;
         this.arrowCount = arrowCount;
@@ -80,10 +80,6 @@ public class Hero extends FieldObject {
     private int step;
 
     private boolean hasGold = false;
-
-    public void setMatrixLength(int matrixLength) {
-        this.matrixLength = matrixLength;
-    }
 
     public boolean hasGold() {
         return hasGold;
@@ -172,7 +168,6 @@ public class Hero extends FieldObject {
         final StringBuilder sb = new StringBuilder("Hero{");
         sb.append("name=").append(name);
         sb.append(", direction=").append(direction);
-
         sb.append(", arrowCount=").append(arrowCount);
         sb.append(", shortCut=").append(this.getShortCut());
         sb.append(", column=").append(this.getColumn());

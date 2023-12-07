@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import hu.nye.progtech.gamelogic.db.DatabaseLoader;
-import hu.nye.progtech.models.ConsoleColor;
+import hu.nye.progtech.enums.ConsoleColor;
 import hu.nye.progtech.models.Hero;
 import hu.nye.progtech.models.MenuCallback;
 
@@ -31,8 +31,8 @@ public class LoadGame {
             List<Hero> heroes = dbLoader.getHeroes();
             if (!heroes.isEmpty()) {
                 for (int i = 0; i < heroes.stream().count(); i++) {
-                    System.out.println(ConsoleColor.GREEN + (i + 1)
-                            + ConsoleColor.RESET + ". " + heroes.get(i).getName()
+                    System.out.println(ConsoleColor.GREEN.getColor() + (i + 1)
+                            + ConsoleColor.RESET.getColor() + ". " + heroes.get(i).getName()
                             + ", lépésszám (" + heroes.get(i).getStep() + ")");
                 }
             } else {
@@ -40,7 +40,7 @@ public class LoadGame {
             }
 
 
-            System.out.println(ConsoleColor.GREEN + ((long) heroes.size() + 1)  + ConsoleColor.RESET + ". Vissza");
+            System.out.println(ConsoleColor.GREEN.getColor() + ((long) heroes.size() + 1)  + ConsoleColor.RESET.getColor() + ". Vissza");
             Scanner scanner = new Scanner(System.in);
             System.out.print("Menü: ");
             if (scanner.hasNext()) {

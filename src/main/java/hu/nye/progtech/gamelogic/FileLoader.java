@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import hu.nye.progtech.models.Direction;
+import hu.nye.progtech.enums.Direction;
 import hu.nye.progtech.models.FieldObject;
 import hu.nye.progtech.models.Hero;
 
@@ -98,12 +98,7 @@ public class FileLoader {
     }
 
     private Direction getCorrectDirection(char  direction) {
-        return switch (direction) {
-            case 'N' -> Direction.North;
-            case 'W' -> Direction.West;
-            case 'S' -> Direction.South;
-            default -> Direction.East;
-        };
+        return Direction.getDirectionFromChar(direction);
     }
 
 

@@ -2,8 +2,7 @@ package hu.nye.progtech.views;
 
 import java.util.Scanner;
 
-import hu.nye.progtech.gamelogic.WumpusLogic;
-import hu.nye.progtech.models.ConsoleColor;
+import hu.nye.progtech.enums.ConsoleColor;
 import hu.nye.progtech.models.MenuCallback;
 
 /**

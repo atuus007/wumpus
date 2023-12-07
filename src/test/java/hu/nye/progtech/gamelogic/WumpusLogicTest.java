@@ -1,7 +1,7 @@
 package hu.nye.progtech.gamelogic;
 
 import hu.nye.progtech.gamelogic.db.DatabaseLoader;
-import hu.nye.progtech.models.Direction;
+import hu.nye.progtech.enums.Direction;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
