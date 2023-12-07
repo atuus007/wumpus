@@ -19,7 +19,7 @@ public class SaveGame {
     public static void show(MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Játék mentése--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Játék mentése--------------------" + ConsoleColor.RESET.getColor());
             System.out.println("játék mentve");
             callback.call(viewMenu);
         }

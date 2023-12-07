@@ -98,7 +98,8 @@ public class FileLoader {
     }
 
     private Direction getCorrectDirection(char  direction) {
-        return Direction.getDirectionFromChar(direction);
+        Direction asd = Direction.getDirectionFromChar(direction);
+        return asd;
     }
 
 

@@ -21,7 +21,7 @@ public class Win {
     public static void show(WumpusLogic wumpusLogic, MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Nyertél--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Nyertél--------------------" + ConsoleColor.RESET.getColor());
             String extend = " lépés számmal visszatérned az arannyal a kezdőpontra!";
             System.out.println("Gratulálok! Sikerült " + wumpusLogic.getHero().getStep() + extend);
             callback.call(viewMenu);

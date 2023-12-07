@@ -21,10 +21,10 @@ public class GiveUp {
     public static void show(MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Játék feladása (kilépés)--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Játék feladása (kilépés)--------------------" + ConsoleColor.RESET.getColor());
 
-            System.out.println(ConsoleColor.GREEN + "1." + ConsoleColor.RESET + " Igen, feladom!");
-            System.out.println(ConsoleColor.GREEN + "2." + ConsoleColor.RESET + " Nem, folyatatom!");
+            System.out.println(ConsoleColor.GREEN.getColor() + "1." + ConsoleColor.RESET.getColor() + " Igen, feladom!");
+            System.out.println(ConsoleColor.GREEN.getColor() + "2." + ConsoleColor.RESET.getColor() + " Nem, folyatatom!");
             System.out.print("menü: ");
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextInt()) {

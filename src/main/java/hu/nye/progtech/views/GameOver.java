@@ -20,7 +20,7 @@ public class GameOver {
     public static void show(MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Vesztettél--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Vesztettél--------------------" + ConsoleColor.RESET.getColor());
             System.out.println("Sajnos ez most nem sikerült!");
             callback.call(viewMenu);
         }

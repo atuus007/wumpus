@@ -32,14 +32,17 @@ public class WumpusLogic {
 
     public WumpusLogic(LoadFrom loadFrom, int id, DatabaseLoader databaseLoader) {
         FileLoader fileLoader = new FileLoader();
+
+
+
         switch (loadFrom) {
             case file:
-                hero = fileLoader.getHero();
+                this.hero = fileLoader.getHero();
                 hero.setStartColumn(hero.getColumn());
                 hero.setStartRow(hero.getRow());
                 // beállítjuk a kezdeti értéket, mert ez lesz a cél
                 field = fileLoader.getField();
-                hero.setMatrixLength(fileLoader.getMatrixLength());
+                //hero.setMatrixLength(fileLoader.getMatrixLength());
                 break;
             default:
                 // játék betöltése adb-ből név alapján

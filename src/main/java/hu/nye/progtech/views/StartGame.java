@@ -21,11 +21,11 @@ public class StartGame {
     public static void show(MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Játék--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Játék--------------------" + ConsoleColor.RESET.getColor());
 
-            System.out.println(ConsoleColor.GREEN + "1." + ConsoleColor.RESET + " Új játék");
-            System.out.println(ConsoleColor.GREEN + "2." + ConsoleColor.RESET + " Játék betöltése");
-            System.out.println(ConsoleColor.GREEN + "3." + ConsoleColor.RESET + " Vissza");
+            System.out.println(ConsoleColor.GREEN.getColor() + "1." + ConsoleColor.RESET.getColor() + " Új játék");
+            System.out.println(ConsoleColor.GREEN.getColor() + "2." + ConsoleColor.RESET.getColor() + " Játék betöltése");
+            System.out.println(ConsoleColor.GREEN.getColor() + "3." + ConsoleColor.RESET.getColor() + " Vissza");
             System.out.print("menü: ");
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextInt()) {

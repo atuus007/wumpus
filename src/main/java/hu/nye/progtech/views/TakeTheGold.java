@@ -20,7 +20,7 @@ public class TakeTheGold {
     public static void show(WumpusLogic gameLogic, MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Arany felvétele--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Arany felvétele--------------------" + ConsoleColor.RESET.getColor());
             if (gameLogic.takeTheGold()) {
                 System.out.println("Felvetted az aranyat");
             } else {

@@ -19,7 +19,7 @@ public class TurnRight {
     public static void show(WumpusLogic gameLogic, MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Jobbra fordulás--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Jobbra fordulás--------------------" + ConsoleColor.RESET.getColor());
             gameLogic.getHero().turnRight();
             System.out.println("A  hősöd iránya most már: " + gameLogic.getHero().getDirectionAsCharacter());
             callback.call(-1);

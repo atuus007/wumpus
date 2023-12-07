@@ -19,7 +19,7 @@ public class Move {
     public static void show(WumpusLogic gameLogic, MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Lépés--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Lépés--------------------" + ConsoleColor.RESET.getColor());
             System.out.println(gameLogic.goStraightAhead());
             callback.call(-1);
         }

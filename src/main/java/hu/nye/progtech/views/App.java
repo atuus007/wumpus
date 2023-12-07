@@ -25,10 +25,10 @@ public class App {
         logger.info("Játék elindítva");
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------APP--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------APP--------------------" + ConsoleColor.RESET.getColor());
 
-            System.out.println(ConsoleColor.GREEN + "1." + ConsoleColor.RESET + " Játék indítása");
-            System.out.println(ConsoleColor.GREEN + "2." + ConsoleColor.RESET + " Kilépés");
+            System.out.println(ConsoleColor.GREEN.getColor() + "1." + ConsoleColor.RESET.getColor() + " Játék indítása");
+            System.out.println(ConsoleColor.GREEN.getColor() + "2." + ConsoleColor.RESET.getColor() + " Kilépés");
             System.out.print("menü: ");
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextInt()) {

@@ -47,34 +47,34 @@ public class Wumpus {
      * Let's call this as the first sentence,
      * here the second one.
      */
-    public void show(MenuCallback callback) {
+    public static void show(MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Wumpus--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Wumpus--------------------" + ConsoleColor.RESET.getColor());
             // kezdő pálya betöltése
             //FieldDrawer.draw(gameLogic);
             //this.fieldDrawer(gameLogic);
 
             // hős adatai
             System.out.println("Hős adatai:");
-            System.out.println("neve: " + ConsoleColor.GREEN + gameLogic.getHero().getName() + ConsoleColor.RESET);
-            String extend = "," + gameLogic.getHero().getRow() + ConsoleColor.RESET;
-            System.out.println("pozíciója: " + ConsoleColor.GREEN + gameLogic.getHero().getColumn() + extend);
+            System.out.println("neve: " + ConsoleColor.GREEN.getColor() + gameLogic.getHero().getName() + ConsoleColor.RESET.getColor());
+            String extend = "," + gameLogic.getHero().getRow() + ConsoleColor.RESET.getColor();
+            System.out.println("pozíciója: " + ConsoleColor.GREEN.getColor() + gameLogic.getHero().getColumn() + extend);
             String startPoint = "," + gameLogic.getHero().getStartRow() + ConsoleColor.RESET;
-            System.out.println("kezdő pozícízó: " + ConsoleColor.GREEN + gameLogic.getHero().getStartColumn() + startPoint);
-            System.out.println("iránya: " + ConsoleColor.GREEN + gameLogic.getHero().getDirectionAsCharacter() + ConsoleColor.RESET);
-            System.out.println("arany: " + ConsoleColor.GREEN + gameLogic.getHero().hasGold() + ConsoleColor.RESET);
-            System.out.println("nyilak száma: " + ConsoleColor.GREEN + gameLogic.getHero().getArrowCount() + ConsoleColor.RESET);
-            System.out.println("lépések száma: " + ConsoleColor.GREEN + gameLogic.getHero().getStep() + ConsoleColor.RESET);
+            System.out.println("kezdő pozícízó: " + ConsoleColor.GREEN.getColor() + gameLogic.getHero().getStartColumn() + startPoint);
+            System.out.println("iránya: " + ConsoleColor.GREEN.getColor() + gameLogic.getHero().getDirectionAsCharacter() + ConsoleColor.RESET.getColor());
+            System.out.println("arany: " + ConsoleColor.GREEN.getColor() + gameLogic.getHero().hasGold() + ConsoleColor.RESET.getColor());
+            System.out.println("nyilak száma: " + ConsoleColor.GREEN.getColor() + gameLogic.getHero().getArrowCount() + ConsoleColor.RESET.getColor());
+            System.out.println("lépések száma: " + ConsoleColor.GREEN.getColor() + gameLogic.getHero().getStep() + ConsoleColor.RESET.getColor());
 
 
-            System.out.println(ConsoleColor.GREEN + "1. " + ConsoleColor.RESET + "Játék mentése");
-            System.out.println(ConsoleColor.GREEN + "2. " + ConsoleColor.RESET + "Játék feladása (kilépés)");
-            System.out.println(ConsoleColor.GREEN + "3. " + ConsoleColor.RESET + "Lépés");
-            System.out.println(ConsoleColor.GREEN + "4. " + ConsoleColor.RESET + "Lövés");
-            System.out.println(ConsoleColor.GREEN + "5. " + ConsoleColor.RESET + "Balra fordulás");
-            System.out.println(ConsoleColor.GREEN + "6. " + ConsoleColor.RESET + "Jobbra fordulás");
-            System.out.println(ConsoleColor.GREEN + "7. " + ConsoleColor.RESET + "Arany felvétele");
+            System.out.println(ConsoleColor.GREEN.getColor()  + "1. " + ConsoleColor.RESET.getColor()  + "Játék mentése");
+            System.out.println(ConsoleColor.GREEN.getColor()  + "2. " + ConsoleColor.RESET.getColor()  + "Játék feladása (kilépés)");
+            System.out.println(ConsoleColor.GREEN.getColor()  + "3. " + ConsoleColor.RESET.getColor()  + "Lépés");
+            System.out.println(ConsoleColor.GREEN.getColor()  + "4. " + ConsoleColor.RESET.getColor()  + "Lövés");
+            System.out.println(ConsoleColor.GREEN.getColor()  + "5. " + ConsoleColor.RESET.getColor()  + "Balra fordulás");
+            System.out.println(ConsoleColor.GREEN.getColor()  + "6. " + ConsoleColor.RESET.getColor()  + "Jobbra fordulás");
+            System.out.println(ConsoleColor.GREEN.getColor()  + "7. " + ConsoleColor.RESET.getColor()  + "Arany felvétele");
             System.out.print("menü: ");
 
             Scanner scanner = new Scanner(System.in);

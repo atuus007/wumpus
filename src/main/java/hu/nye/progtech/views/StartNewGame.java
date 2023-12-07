@@ -21,10 +21,10 @@ public class StartNewGame {
     public static void show(MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Új játék indítása--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Új játék indítása--------------------" + ConsoleColor.RESET.getColor());
 
-            System.out.println(ConsoleColor.GREEN + "1." + ConsoleColor.RESET + " Név megadása");
-            System.out.println(ConsoleColor.GREEN + "2." + ConsoleColor.RESET + " Vissza");
+            System.out.println(ConsoleColor.GREEN.getColor() + "1." + ConsoleColor.RESET.getColor() + " Név megadása");
+            System.out.println(ConsoleColor.GREEN.getColor() + "2." + ConsoleColor.RESET.getColor() + " Vissza");
             System.out.print("menü: ");
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextInt()) {

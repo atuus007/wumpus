@@ -27,7 +27,7 @@ public class LoadGame {
     public static void show(DatabaseLoader dbLoader, MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Darabban maradt játékok--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Darabban maradt játékok--------------------" + ConsoleColor.RESET.getColor());
             List<Hero> heroes = dbLoader.getHeroes();
             if (!heroes.isEmpty()) {
                 for (int i = 0; i < heroes.stream().count(); i++) {

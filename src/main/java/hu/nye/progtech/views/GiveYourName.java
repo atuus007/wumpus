@@ -23,15 +23,15 @@ public class GiveYourName {
     public static void show(MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------APP--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------APP--------------------" + ConsoleColor.RESET.getColor());
             Scanner scanner = new Scanner(System.in);
             System.out.print("felhasználónév: ");
             if (scanner.hasNext()) {
                 name = scanner.nextLine();
             }
-            System.out.println(ConsoleColor.GREEN + "1." + ConsoleColor.RESET + " Wumpusz indítása");
-            System.out.println(ConsoleColor.GREEN + "2." + ConsoleColor.RESET + " Név módosítása");
-            System.out.println(ConsoleColor.GREEN + "3." + ConsoleColor.RESET + " Vissza");
+            System.out.println(ConsoleColor.GREEN.getColor() + "1." + ConsoleColor.RESET.getColor() + " Wumpusz indítása");
+            System.out.println(ConsoleColor.GREEN.getColor() + "2." + ConsoleColor.RESET.getColor() + " Név módosítása");
+            System.out.println(ConsoleColor.GREEN.getColor() + "3." + ConsoleColor.RESET.getColor() + " Vissza");
             System.out.print("menü: ");
             if (scanner.hasNextInt()) {
                 viewMenu = scanner.nextInt();

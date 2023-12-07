@@ -19,7 +19,7 @@ public class Shoot {
     public static void show(WumpusLogic gameLogic, MenuCallback callback) {
         viewLoop = true;
         while (viewLoop) {
-            System.out.println(ConsoleColor.BLUE + "-----------------Lövés--------------------" + ConsoleColor.RESET);
+            System.out.println(ConsoleColor.BLUE.getColor() + "-----------------Lövés--------------------" + ConsoleColor.RESET.getColor());
             if (gameLogic.getHero().getArrowCount() != 0) {
                 // van lőszere
                 if (gameLogic.shootWithArrow()) {
