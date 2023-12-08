@@ -4,7 +4,7 @@ target/
 !**/src/test/**/target/
 .idea/
 htmlReport/
-
+wumpus.log
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
