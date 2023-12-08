@@ -29,11 +29,12 @@ public class App {
 
             System.out.println(ConsoleColor.GREEN.getColor() + "1." + ConsoleColor.RESET.getColor() + " Játék indítása");
             System.out.println(ConsoleColor.GREEN.getColor() + "2." + ConsoleColor.RESET.getColor() + " Kilépés");
-            System.out.print("menü: ");
+            System.out.print("Menü: ");
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextInt()) {
                 viewMenu = scanner.nextInt();
             }
+            System.out.flush();
             callback.call(viewMenu);
         }
         logger.info("Játék bezárva");
