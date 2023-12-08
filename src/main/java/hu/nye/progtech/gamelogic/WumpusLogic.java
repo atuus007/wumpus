@@ -38,18 +38,17 @@ public class WumpusLogic {
         switch (loadFrom) {
             case file:
                 this.hero = fileLoader.getHero();
-                hero.setStartColumn(hero.getColumn());
-                hero.setStartRow(hero.getRow());
+                //hero.setStartColumn(hero.getColumn());
+                //hero.setStartRow(hero.getRow());
                 // beállítjuk a kezdeti értéket, mert ez lesz a cél
-                field = fileLoader.getField();
                 //hero.setMatrixLength(fileLoader.getMatrixLength());
                 break;
             default:
                 // játék betöltése adb-ből név alapján
-                hero = databaseLoader.getHeroData(id);
-                field = fileLoader.getField();
+                this.hero = databaseLoader.getHeroData(id);
                 break;
         }
+        this.field = fileLoader.getField();
     }
 
     /**

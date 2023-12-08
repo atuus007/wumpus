@@ -21,7 +21,7 @@ public class FieldDrawer {
         return fieldElement.getColumn() == hero.getColumn() && fieldElement.getRow() == hero.getRow();
     }
 
-    /**afsdf
+    /**
      * Let's call this as the first sentence,
      * here the second one.
      */
@@ -43,13 +43,13 @@ public class FieldDrawer {
             if (fieldElement.getColumn() - 64 ==  wumpusLogic.getHero().getMatrixLength()) {
                 if (fieldElement.getColumn() - 64 == 0) {
                     if (conditionForColoring(fieldElement, wumpusLogic.getHero())) {
-                        System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND + "%3s\n" + ConsoleColor.RESET, fieldElement.getShortCut());
+                        System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND.getColor() + "%3s\n" + ConsoleColor.RESET.getColor() , fieldElement.getShortCut());
                     } else {
                         System.out.printf("%3s\n", fieldElement.getShortCut());
                     }
                 } else {
                     if (conditionForColoring(fieldElement, wumpusLogic.getHero())) {
-                        System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND + "%3s\n" + ConsoleColor.RESET, fieldElement.getShortCut());
+                        System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND.getColor()  + "%3s\n" + ConsoleColor.RESET.getColor() , fieldElement.getShortCut());
                     } else {
                         System.out.printf("%3s\n", fieldElement.getShortCut());
                     }
@@ -58,14 +58,14 @@ public class FieldDrawer {
             } else {
                 if (fieldElement.getColumn() == 'A') {
                     if (conditionForColoring(fieldElement, wumpusLogic.getHero())) {
-                        System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND + "%d\t" + ConsoleColor.RESET, fieldElement.getRow());
+                        System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND.getColor()  + "%d\t" + ConsoleColor.RESET.getColor() , fieldElement.getRow());
                     } else {
                         System.out.printf("%d\t", fieldElement.getRow());
                     }
 
                 }
                 if (conditionForColoring(fieldElement, wumpusLogic.getHero())) {
-                    System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND + "%3s" + ConsoleColor.RESET, fieldElement.getShortCut());
+                    System.out.printf(ConsoleColor.ANSI_GREEN_BACKGROUND.getColor()  + "%3s" + ConsoleColor.RESET.getColor() , fieldElement.getShortCut());
                 } else {
                     System.out.printf("%3s", fieldElement.getShortCut());
                 }
